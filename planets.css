@@ -1,3 +1,22 @@
 body {
-	color: blue;
+	color: lightblue;
 }
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+}
+
+.card {
+	background: black;
+	padding: 10px 20px;
+}
+
+.card .planet_name, .card .planet_img {
+	text-align: center;
+}
+
