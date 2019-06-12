@@ -2,21 +2,27 @@
 <html>
 	<head>
 		<title>Planets Fact File</title>
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="./planets.css">
 	</head>
 	<body>
+	<div class="container">
 		<div class="card">
 			<h1 class="planet_name">Planet_Name</h1>
-			<div class="planet_img">Img goes here</div>
+			<div class="planet_img_container">
+				<img class="planet_img" src="#">
+			</div>
 			<div class="planet_description">
 				<ul>
-					<li>Property A</li>
-					<li>Property B</li>
-					<li>Property B</li>
-					<li>Property D</li>
+					<li>Radius: <span class="planet_radius"></span></li>
+					<li>Orbital Period: <span class="planet_orbital_period"></span></li>
+					<li>Moons: <span class="planet_moons"></span></li>
+					<li>Day Length: <span class="planet_day_length"></span></li>
 				</ul>
 			</div>
 		</div>
+	</div>
+		
 	
 
 	<script type="text/javascript" src="./planets.js"></script>

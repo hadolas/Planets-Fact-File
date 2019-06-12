@@ -1,5 +1,10 @@
+/* General Styles */
 body {
-	color: lightblue;
+	color: #e3e3e3;
+	margin: 0;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+	font-size: 20px;
 }
 
 ul {
@@ -11,12 +16,45 @@ h1 {
 	margin: 0;
 }
 
+/* Page Styles */
+.container {
+	background: darkgrey;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Card Styles */
 .card {
 	background: black;
 	padding: 10px 20px;
+	width: 300px;
+	height: 450px;
 }
 
-.card .planet_name, .card .planet_img {
+.card .planet_name, .card .planet_img_container {
 	text-align: center;
+}
+
+.card .planet_name {
+	padding-bottom: 15px;
+	letter-spacing: 0.1em;
+	font-size: 2em;
+}
+
+.card .planet_img {
+	width: 100px;
+	height: auto;
+}
+
+.card ul {
+	font-size: 1.5em;
+}
+
+.card ul span {
+	color: #efd242;
 }
 
