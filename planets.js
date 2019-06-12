@@ -14,7 +14,7 @@ function Planet(name, img, radius, orbital_period, moons, day_length) {
 	this.day_length = day_length;
 }
 
-var Mercury = new Planet("Mercury", "../imgs/mercury.png", "2,439km", "88 days", "None", "58d 15h 30m");
+var Mercury = new Planet("Mercury", "../imgs/mercury.png", "2,439km", "88 Earth days", "None", "58d 15h 30m");
 
 planet_name.textContent = Mercury.name;
 planet_img.src = Mercury.img;
