@@ -40,7 +40,8 @@ h1 {
 .card {
 	width: 300px;
 	height: 450px;
-	border: 0.8px solid #efd242;
+	/*border: 0.8px solid #efd242;*/
+	border: 4px solid red;
 	position: relative;
 }
 
@@ -81,5 +82,29 @@ h1 {
 .card ul span {
 	color: #efd242;
 	font-weight: bold;
+}
+
+/* Navigation Styles */
+.button {
+	width: 40px;
+	height: 40px;
+	/*background-color: yellow;*/
+	position: absolute;
+	transform: rotate(45deg);
+	border-color: pink;
+	border-width: 10px;
+}
+
+.button.button_left {
+	left: 15px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+
+}
+
+.button.button_right {
+	right: 15px;
+	border-top-style: solid;
+	border-right-style: solid;
 }
 
