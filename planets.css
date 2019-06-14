@@ -93,16 +93,17 @@ h1 {
 	transform: rotate(45deg);
 	border-color: pink;
 	border-width: 10px;
+	cursor: pointer;
 }
 
-.button.button_left {
+.button#button_left {
 	left: 15px;
 	border-bottom-style: solid;
 	border-left-style: solid;
 
 }
 
-.button.button_right {
+.button#button_right {
 	right: 15px;
 	border-top-style: solid;
 	border-right-style: solid;
