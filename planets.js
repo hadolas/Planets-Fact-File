@@ -8,6 +8,9 @@ var planet_day_length = document.querySelector(".planet_day_length");
 // Nav Selectors
 var button_left = document.querySelector("#button_left");
 var button_right = document.querySelector("#button_right");
+var nav_links_container = document.querySelector(".nav_links_container");
+// var nav_links = document.querySelectorAll(".nav_links_container > span");
+// var nav_links = document.querySelectorAll("span");
 
 function Planet(name, img, radius, orbital_period, moons, day_length) {
 	this.name = name;
@@ -35,6 +38,9 @@ var Venus = new Planet("Venus", "../imgs/mercury.png", "0km", "0 Earth days", "0
 planets_array.push(Venus);
 var Earth = new Planet("Earth", "../imgs/mercury.png", "0km", "0 Earth days", "0", "0d 0h 0m");
 planets_array.push(Earth);
+var Mars = new Planet("Mars", "../imgs/mercury.png", "0km", "0 Earth days", "0", "0d 0h 0m");
+planets_array.push(Mars);
+
 
 var planets_array_length = planets_array.length;
 var planets_array_pointer = 0;
@@ -65,5 +71,54 @@ button_right.addEventListener("click", function() {
 	updatePlanetDetails(planets_array_pointer);
 });
 
+// nav_links
+var nav_links_total = 0;
+function createNewNavLink() {
+	var newLink = document.createElement("span");
+	newLink.id = nav_links_total
+	nav_links_container.appendChild(newLink);
+	nav_links_total++;
+}
 
+for(var i=0; i<planets_array_length; i++) {
+	createNewNavLink();
+}
 
+var nav_links = document.querySelectorAll(".nav_links_container > span");
+// console.log(nav_links[2]);
+
+// console.log(planets_array_length)
+// for(var k=0; k<planets_array_length-1; k++){
+// 	console.log(k);
+// 	nav_links[k].addEventListener("click", function(){
+// 		updatePlanetDetails(k);
+// 	});	
+// }
+
+// var k=0;
+// nav_links.forEach(function(element) {
+// 	console.log(element);
+// 	console.log(k)
+// 	element.addEventListener("click", function(){
+// 		updatePlanetDetails(k);
+// 	})
+// 	if(k<planets_array_length-1){
+// 		k++;
+// 	}
+// })
+
+nav_links_container.addEventListener("click", function(event){
+	// if(event.target.localName!=="span") {
+		// console.log("NOT A BTN");
+		// return;
+	// } 
+	// console.log("clicked")
+	// console.log(nav_links[0].nodeIndex)
+	// console.log(event.target.id);
+	if(event.target.id) {
+		// console.log("btn " + event.target.id+ " clicked!")
+		updatePlanetDetails(event.target.id);
+	}
+})
+
+// console.log(nav_links
