@@ -31,15 +31,23 @@ function updatePlanetDetails(planets_array_pointer) {
 }
 
 var planets_array = [];
-
+									// 			Radius, Orbital period(sun), moons, day_length
 var Mercury = new Planet("Mercury", "../imgs/mercury.png", "2,439km", "88 Earth days", "None", "58d 15h 30m");
 planets_array.push(Mercury);
-var Venus = new Planet("Venus", "../imgs/mercury.png", "0km", "0 Earth days", "0", "0d 0h 0m");
+var Venus = new Planet("Venus", "../imgs/venus.png", "6,051km", "225 Earth days", "None", "116d 18h 0m");
 planets_array.push(Venus);
-var Earth = new Planet("Earth", "../imgs/mercury.png", "0km", "0 Earth days", "0", "0d 0h 0m");
+var Earth = new Planet("Earth", "../imgs/earth.png", "6,371km", "1 Earth day", "1", "365d 0h 0m");
 planets_array.push(Earth);
-var Mars = new Planet("Mars", "../imgs/mercury.png", "0km", "0 Earth days", "0", "0d 0h 0m");
+var Mars = new Planet("Mars", "../imgs/mars.png", "3,389km", "687 Earth days", "2", "1d 0h 37m");
 planets_array.push(Mars);
+var Jupiter = new Planet("Jupiter", "../imgs/jupiter.png", "69,911km", "4,332 Earth days", "79 known", "0d 9h 56m");
+planets_array.push(Jupiter);
+var Saturn = new Planet("Saturn", "../imgs/saturn.png", "58,232km", "10,759 Earth days", "53 confirmed", "0d 10h 42m");
+planets_array.push(Saturn);
+var Uranus = new Planet("Uranus", "../imgs/uranus.png", "25,362km", "31,000 Earth days", "27", "0d 17h 14m");
+planets_array.push(Uranus);
+var Neptune = new Planet("Neptune", "../imgs/neptune.png", "24,622km", "60,200 Earth days", "14", "0d 16h 6m");
+planets_array.push(Neptune);
 
 
 var planets_array_length = planets_array.length;
@@ -85,40 +93,11 @@ for(var i=0; i<planets_array_length; i++) {
 }
 
 var nav_links = document.querySelectorAll(".nav_links_container > span");
-// console.log(nav_links[2]);
 
-// console.log(planets_array_length)
-// for(var k=0; k<planets_array_length-1; k++){
-// 	console.log(k);
-// 	nav_links[k].addEventListener("click", function(){
-// 		updatePlanetDetails(k);
-// 	});	
-// }
-
-// var k=0;
-// nav_links.forEach(function(element) {
-// 	console.log(element);
-// 	console.log(k)
-// 	element.addEventListener("click", function(){
-// 		updatePlanetDetails(k);
-// 	})
-// 	if(k<planets_array_length-1){
-// 		k++;
-// 	}
-// })
 
 nav_links_container.addEventListener("click", function(event){
-	// if(event.target.localName!=="span") {
-		// console.log("NOT A BTN");
-		// return;
-	// } 
-	// console.log("clicked")
-	// console.log(nav_links[0].nodeIndex)
-	// console.log(event.target.id);
+	
 	if(event.target.id) {
-		// console.log("btn " + event.target.id+ " clicked!")
 		updatePlanetDetails(event.target.id);
 	}
-})
-
-// console.log(nav_links
+});

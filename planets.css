@@ -39,8 +39,8 @@ h1 {
 
 /* Card Styles */
 .card {
-	width: 300px;
-	height: 450px;
+	width: 330px;
+	height: 420px;
 	/*border: 0.8px solid #efd242;*/
 	border: 4px solid red;
 	position: relative;
@@ -68,9 +68,8 @@ h1 {
 }
 
 .card .planet_img {
-	/*width: 100px;*/
-	width: 40%;
-	height: auto;
+	height: 120px;
+	width: auto;
 }
 
 .card ul {
