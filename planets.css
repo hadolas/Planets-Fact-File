@@ -94,26 +94,26 @@ h1 {
 	Navigation Styles 
 */
 .button {
-	width: 40px;
-	height: 40px;
+	height: 0;
+	width: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
 	position: absolute;
-	transform: rotate(45deg);
-	border-color: pink;
-	border-width: 10px;
 	cursor: pointer;
-	z-index: 2;
+	z-index: 2;	
+	opacity: 0.8;
 }
 
-.button#button_left {
-	left: 15px;
-	border-bottom-style: solid;
-	border-left-style: solid;
+#button_left {
+	border-right: 40px solid #fff;
+	margin-left: 10px;
+	left: 20px;
 }
 
-.button#button_right {
-	right: 15px;
-	border-top-style: solid;
-	border-right-style: solid;
+#button_right {
+	border-left: 40px solid #fff;
+	margin-left: 10px;
+	right: 20px;
 }
 
 .nav_links_container {
@@ -139,17 +139,23 @@ h1 {
 	Hover Label Styles
 */
 .hover_label {
-	background: black;
+	background: #fff;
 	position: relative;
 	margin-top: 10px;
 	text-align: center;
 	visibility: hidden;
+	opacity: 0.8;
 }
 
-.hover_label_arrow {
+.hover_label .hover_label_text {
+	color: #000;
+	font-weight: bold;
+}
+
+.hover_label .hover_label_arrow {
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
-	border-bottom: 15px solid white;
+	border-bottom: 15px solid #fff;
 	position: absolute;
 	width: 0;
 	height: 0;

@@ -109,7 +109,6 @@ var regex = /\d*/; // regex removes characters which are not digits
 var hover_label_text = document.querySelector(".hover_label_text");
 nav_links_container.addEventListener("mouseover", function(){
 	if(event.target.id) {
-		console.log(event.target.id)
 		
 		hover_label_text.textContent = planets_array[event.target.id].name;
 		hover_label_arrow.style.left = "25px"; // Distance between each nav_link (dot)
