@@ -47,7 +47,6 @@ h1 {
 .card {
 	width: 330px;
 	height: 420px;
-	/*border: 0.8px solid #efd242;*/
 	border: 4px solid red;
 	position: relative;
 }
@@ -60,7 +59,6 @@ h1 {
 	position: absolute;
 	opacity: 0.5;
 	z-index: -1;
-	
 }
 
 .card .planet_name, .card .planet_img_container {
@@ -90,6 +88,7 @@ h1 {
 	font-weight: bold;
 }
 
+
 /* 
 	Navigation Styles 
 */
@@ -106,14 +105,96 @@ h1 {
 
 #button_left {
 	border-right: 40px solid #fff;
-	margin-left: 10px;
 	left: 20px;
 }
 
 #button_right {
 	border-left: 40px solid #fff;
-	margin-left: 10px;
 	right: 20px;
+}
+
+@media (max-width:500px) {
+	.card {
+		font-size: 0.7em;
+		width: 250px;
+		height: 350px;
+		border-width: 2px;
+	}
+
+	.card .planet_img {
+		height: 100px;
+	}
+
+	.button {
+		border-top: 15px solid transparent;
+		border-bottom: 15px solid transparent;
+	}
+
+	#button_left {
+		border-right: 30px solid #fff;
+		left: 5px; 
+	}
+
+	#button_right {
+		border-left: 30px solid #fff;
+		right: 5px;
+	}
+}
+
+@media (max-width:350px) {
+	.card {
+		font-size: 0.6em;
+		width: 190px;
+		height: 260px;
+		border-width: 1px;
+	}
+
+	.card .planet_img {
+		height: 75px;
+	}
+
+	.button {
+		border-top: 8px solid transparent;
+		border-bottom: 8px solid transparent;
+	}
+
+	#button_left {
+		border-right: 20px solid #fff;
+		left: 5px; 
+	}
+
+	#button_right {
+		border-left: 20px solid #fff;
+		right: 5px;
+	}
+}
+
+@media (max-width:240px) {
+	.card {
+		font-size: 0.5em;
+		width: 170px;
+		height: 230px;
+		border-width:0.5px;
+	}
+
+	.card .planet_img {
+		height: 65px;
+	}
+
+	.button {
+		border-top: 6px solid transparent;
+		border-bottom: 6px solid transparent;
+	}
+
+	#button_left {
+		border-right: 16px solid #fff;
+		left: 1px; 
+	}
+
+	#button_right {
+		border-left: 16px solid #fff;
+		right: 1px;
+	}
 }
 
 .nav_links_container {
@@ -125,8 +206,8 @@ h1 {
 }
 
 .nav_links_container span {
-	width: 15px;
-	height: 15px;
+	width: 10px;
+	height: 10px;
 	display: block;
 	background-color: white;
 	border-radius: 50%;
@@ -134,6 +215,7 @@ h1 {
 	cursor: pointer;
 	z-index: 2;
 }
+
 
 /* 
 	Hover Label Styles
@@ -153,8 +235,8 @@ h1 {
 }
 
 .hover_label .hover_label_arrow {
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
 	border-bottom: 15px solid #fff;
 	position: absolute;
 	width: 0;

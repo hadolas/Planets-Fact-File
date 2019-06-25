@@ -109,11 +109,11 @@ var regex = /\d*/; // regex removes characters which are not digits
 var hover_label_text = document.querySelector(".hover_label_text");
 nav_links_container.addEventListener("mouseover", function(){
 	if(event.target.id) {
-		
+
 		hover_label_text.textContent = planets_array[event.target.id].name;
-		hover_label_arrow.style.left = "25px"; // Distance between each nav_link (dot)
+		hover_label_arrow.style.left = "20px"; // Distance between each nav_link (dot)
 		var arrow_pos = regex.exec(hover_label_arrow.style.left)[0]; // Remove 'px'
-		hover_label_arrow.style.left = (arrow_pos*event.target.id)+2.5+"px"; // Update arrow position
+		hover_label_arrow.style.left = (arrow_pos*event.target.id)+5+"px"; // Update arrow position
 		hover_label.style.visibility = "visible";
 
 	} else {
