@@ -9,8 +9,6 @@ var planet_day_length = document.querySelector(".planet_day_length");
 var button_left = document.querySelector("#button_left");
 var button_right = document.querySelector("#button_right");
 var nav_links_container = document.querySelector(".nav_links_container");
-// var nav_links = document.querySelectorAll(".nav_links_container > span");
-// var nav_links = document.querySelectorAll("span");
 
 function Planet(name, img, radius, orbital_period, moons, day_length) {
 	this.name = name;
@@ -79,7 +77,7 @@ button_right.addEventListener("click", function() {
 	updatePlanetDetails(planets_array_pointer);
 });
 
-// nav_links
+// Create a nav_link (dot) for each planet
 var nav_links_total = 0;
 function createNewNavLink() {
 	var newLink = document.createElement("span");
@@ -92,12 +90,34 @@ for(var i=0; i<planets_array_length; i++) {
 	createNewNavLink();
 }
 
+// If a nav_link (dot) is clicked, then update info to that planet
 var nav_links = document.querySelectorAll(".nav_links_container > span");
-
-
-nav_links_container.addEventListener("click", function(event){
+nav_links_container.addEventListener("click", function(){
 	
 	if(event.target.id) {
 		updatePlanetDetails(event.target.id);
+	}
+});
+
+
+// Show info label when hovering over a nav_link (dot)
+var hover_label = document.querySelector(".hover_label");
+var hover_label_arrow = document.querySelector(".hover_label_arrow");
+
+var regex = /\d*/; // regex removes characters which are not digits
+
+var hover_label_text = document.querySelector(".hover_label_text");
+nav_links_container.addEventListener("mouseover", function(){
+	if(event.target.id) {
+		console.log(event.target.id)
+		
+		hover_label_text.textContent = planets_array[event.target.id].name;
+		hover_label_arrow.style.left = "25px"; // Distance between each nav_link (dot)
+		var arrow_pos = regex.exec(hover_label_arrow.style.left)[0]; // Remove 'px'
+		hover_label_arrow.style.left = (arrow_pos*event.target.id)+2.5+"px"; // Update arrow position
+		hover_label.style.visibility = "visible";
+
+	} else {
+		hover_label.style.visibility = "hidden";
 	}
 });

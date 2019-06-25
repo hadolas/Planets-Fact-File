@@ -94,6 +94,7 @@ h1 {
 	border-color: pink;
 	border-width: 10px;
 	cursor: pointer;
+	z-index: 2;
 }
 
 .button#button_left {
@@ -125,4 +126,24 @@ h1 {
 	border-radius: 50%;
 	margin: 5px;
 	cursor: pointer;
+	z-index: 2;
+}
+
+.hover_label {
+	background: black;
+	position: relative;
+	margin-top: 10px;
+	text-align: center;
+	visibility: hidden;
+}
+
+.hover_label_arrow {
+	border-width: 15px;
+	border-style: solid;
+	border-color: transparent transparent white transparent;
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 2.5px;
 }
