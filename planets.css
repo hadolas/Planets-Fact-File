@@ -1,4 +1,6 @@
-/* General Styles */
+/* 
+	General Styles 
+*/
 body {
 	color: #e3e3e3;
 	margin: 0;
@@ -17,7 +19,9 @@ h1 {
 	margin: 0;
 }
 
-/* Page Styles */
+/* 
+	Page Styles
+*/
 .container {
 	width: 100%;
 	height: 100vh;
@@ -37,7 +41,9 @@ h1 {
 	background-color: #3c1b35;
 }
 
-/* Card Styles */
+/* 
+	Card Styles 
+*/
 .card {
 	width: 330px;
 	height: 420px;
@@ -84,11 +90,12 @@ h1 {
 	font-weight: bold;
 }
 
-/* Navigation Styles */
+/* 
+	Navigation Styles 
+*/
 .button {
 	width: 40px;
 	height: 40px;
-	/*background-color: yellow;*/
 	position: absolute;
 	transform: rotate(45deg);
 	border-color: pink;
@@ -101,7 +108,6 @@ h1 {
 	left: 15px;
 	border-bottom-style: solid;
 	border-left-style: solid;
-
 }
 
 .button#button_right {
@@ -129,6 +135,9 @@ h1 {
 	z-index: 2;
 }
 
+/* 
+	Hover Label Styles
+*/
 .hover_label {
 	background: black;
 	position: relative;

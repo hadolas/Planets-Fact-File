@@ -29,7 +29,7 @@ function updatePlanetDetails(planets_array_pointer) {
 }
 
 var planets_array = [];
-									// 			Radius, Orbital period(sun), moons, day_length
+
 var Mercury = new Planet("Mercury", "../imgs/mercury.png", "2,439km", "88 Earth days", "None", "58d 15h 30m");
 planets_array.push(Mercury);
 var Venus = new Planet("Venus", "../imgs/venus.png", "6,051km", "225 Earth days", "None", "116d 18h 0m");
