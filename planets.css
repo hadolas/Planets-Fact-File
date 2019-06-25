@@ -138,9 +138,9 @@ h1 {
 }
 
 .hover_label_arrow {
-	border-width: 15px;
-	border-style: solid;
-	border-color: transparent transparent white transparent;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid white;
 	position: absolute;
 	width: 0;
 	height: 0;
