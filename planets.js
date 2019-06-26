@@ -28,6 +28,22 @@ function updatePlanetDetails(planets_array_pointer) {
 	planet_day_length.textContent = planets_array[planets_array_pointer].day_length;
 }
 
+function decrement_planet_array_pointer() {
+	if(planets_array_pointer===0){
+		planets_array_pointer=planets_array_length-1;
+	} else {
+		planets_array_pointer--;
+	}
+}
+
+function increment_planet_array_pointer() {
+	if(planets_array_pointer===planets_array_length-1) {
+		planets_array_pointer=0;
+	} else {
+		planets_array_pointer++;
+	}
+}
+
 var planets_array = [];
 
 var Mercury = new Planet("Mercury", "../imgs/mercury.png", "2,439km", "88 Earth days", "None", "58d 15h 30m");
@@ -55,25 +71,13 @@ updatePlanetDetails(planets_array_pointer);
 
 // button_left
 button_left.addEventListener("click", function() {
-
-	if(planets_array_pointer===0){
-		planets_array_pointer=planets_array_length-1;
-	} else {
-		planets_array_pointer--;
-	}
-
+	decrement_planet_array_pointer();
 	updatePlanetDetails(planets_array_pointer);
 });
 
 // button_right
 button_right.addEventListener("click", function() {
-
-	if(planets_array_pointer===planets_array_length-1) {
-		planets_array_pointer=0;
-	} else {
-		planets_array_pointer++;
-	}
-
+	increment_planet_array_pointer();
 	updatePlanetDetails(planets_array_pointer);
 });
 
@@ -118,5 +122,18 @@ nav_links_container.addEventListener("mouseover", function(){
 
 	} else {
 		hover_label.style.visibility = "hidden";
+	}
+});
+
+// Navigating with arrow keys
+document.addEventListener("keydown", function(event){
+
+	if(event.which===39) {
+		increment_planet_array_pointer();
+		updatePlanetDetails(planets_array_pointer);
+	}
+	if(event.which===37) {
+		decrement_planet_array_pointer();
+		updatePlanetDetails(planets_array_pointer);
 	}
 });
