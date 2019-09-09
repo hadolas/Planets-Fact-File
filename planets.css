@@ -205,6 +205,23 @@ h1 {
 	display: flex;
 }
 
+@media (max-height:460px) {
+	.card {
+		font-size: 0.8em;
+		width: 300px;
+		height: auto;
+		border-width: 2px;
+	}
+
+	.card .planet_img {
+		height: 100px;
+	}
+
+	.nav_links_container {
+		margin-top: 5px;
+	}
+}
+
 .nav_links_container span {
 	width: 10px;
 	height: 10px;
